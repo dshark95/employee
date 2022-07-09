@@ -1,0 +1,31 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "Employee 1",
+      "designation": "test",
+      "salary": 1000,
+      "bio": "My short Bio",
+      "dob": "20/01/1995",
+      "isDeleted": true
+    },
+    {
+      "id": 2,
+      "name": "Emp 2",
+      "designation": "Job5",
+      "salary": "205",
+      "bio": "My very long extreme bio ssss bio",
+      "dob": "04/07/2022",
+      "isDeleted": false
+    },
+    {
+      "name": "Test3",
+      "designation": "Test3",
+      "salary": 700,
+      "bio": "no bio",
+      "dob": "04/07/2022",
+      "isDeleted": false,
+      "id": 3
+    }
+  ]
+}

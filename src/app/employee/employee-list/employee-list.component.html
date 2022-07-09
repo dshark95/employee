@@ -1,0 +1,23 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th *ngFor="let col of tableConfig.tableColumn" scope="col">{{col.label}}</th>
+      <th *ngIf="tableConfig.actionColumn.length>0">&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeeList;let index=index;">
+      <td *ngFor="let col of tableConfig.tableColumn">{{employee[col.data] | data:col.pipeType}}</td>
+      <td *ngIf="tableConfig.actionColumn.length>0">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" [id]="'dropdownMenuButton'+index" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Action
+          </button>
+          <div class="dropdown-menu" [attr.aria-labelledby]="'dropdownMenuButton'+index">
+            <a *ngFor="let action of tableConfig.actionColumn" class="dropdown-item" (click)="dropdownCallback(employee.id, action.action)">{{action.label}}</a>           
+          </div>
+        </div>
+      </td>
+    </tr>     
+  </tbody>
+</table>
